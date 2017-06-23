@@ -1,0 +1,23 @@
+{
+  "name": "curso-nodejs-com-express",
+  "version": "1.0.0",
+  "description": "Curso de NodeJS com ExpressJS.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcfmello/curso-nodejs-com-express.git"
+  },
+  "author": "Paulo Cesar Ferreira de Mello <pcfmello@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcfmello/curso-nodejs-com-express/issues"
+  },
+  "homepage": "https://github.com/pcfmello/curso-nodejs-com-express#readme"
+}
