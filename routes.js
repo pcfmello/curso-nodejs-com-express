@@ -17,4 +17,15 @@ router.post('/body', function(req, res) {
     //res.json(req.body.name); Retorna o atributo 'name' do objeto BODY
 });
 
+router.get('/busca-todos', function(req, res) {
+     res.status(200).json(
+         [
+             { nome: 'Paulo Cesar', cidade: 'Florianópolis/SC' },
+             { nome: 'Claudia Rodrigues', cidade: 'Florianópolis/SC' },
+             { nome: 'Jaqueline Ferreira', cidade: 'Londrina/PR' },
+             { nome: 'Gertrudes Sotta', cidade: 'Joaquim Távora/PR'}
+         ]
+     );
+});
+
 module.exports = router;
