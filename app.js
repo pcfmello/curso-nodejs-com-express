@@ -15,10 +15,18 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/', function(req, res) {
-    res.json({ routeName: 'Curso de NodeJS com ' + req.frameworkName});
+app.get('/', function(req, res, next) {
+    next(new Error('erro customizado'));
+    //res.json({ routeName: 'Curso de NodeJS com ' + req.frameworkName});
 });
 app.use('/hello', routes);
+
+app.use(function(err, req, res, next) {
+    res.status(500)
+        .json({
+            message: "Houve um erro interno!"
+        });
+});
 
 http.createServer(app).listen(3000, function() {
     console.log('Express started!')
