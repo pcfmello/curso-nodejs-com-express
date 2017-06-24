@@ -16,8 +16,8 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res, next) {
-    next(new Error('erro customizado'));
-    //res.json({ routeName: 'Curso de NodeJS com ' + req.frameworkName});
+    //next(new Error('erro customizado'));
+    res.json({ routeName: 'Curso de NodeJS com ' + req.frameworkName});
 });
 app.use('/hello', routes);
 
