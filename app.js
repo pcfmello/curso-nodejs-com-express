@@ -9,8 +9,14 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(function(req, res, next) {
+    console.log('Executando middleware de aplicação');
+    req.frameworkName = 'Express';
+    next();
+});
+
 app.get('/', function(req, res) {
-    res.json({ routeName: 'Curso de NodeJS com Express'});
+    res.json({ routeName: 'Curso de NodeJS com ' + req.frameworkName});
 });
 app.use('/hello', routes);
 
